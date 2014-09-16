@@ -49,7 +49,11 @@ public class hello extends HttpServlet {
         SortedSet<String> set = new TreeSet<String>(Collections.list(paramNames));
         Iterator it = set.iterator();
 
-        sb.append("<table>");        
+        sb.append("<table>");
+        sb.append("<tr>");
+        sb.append("<th>ПараметрЪ</th>");
+        sb.append("<th>Value</th>");
+        sb.append("</tr>");
         while (it.hasNext()) {
             String paramName = (String) it.next();
             String[] paramValues = request.getParameterValues(paramName);
